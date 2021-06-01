@@ -2304,9 +2304,13 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (34:1) <Card>
+    // (37:1) <Card>
     function create_default_slot(ctx) {
     	let input;
+    	let t0;
+    	let p0;
+    	let t2;
+    	let p1;
     	let current;
 
     	input = new Input({
@@ -2317,9 +2321,23 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			create_component(input.$$.fragment);
+    			t0 = space();
+    			p0 = element("p");
+    			p0.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pharetra efficitur hendrerit. Nunc urna orci, fringilla quis cursus a, scelerisque vel sem. Aenean sed elementum odio, in pretium magna. Nunc quis leo id nisl auctor mattis eget lacinia sem. Nulla libero lectus, imperdiet tempor arcu at, aliquet feugiat est. Sed ac justo nulla. Phasellus eleifend at ex vitae hendrerit. Etiam quis eros vitae ligula dapibus posuere. Sed eu tristique magna, scelerisque lobortis nulla. In et egestas massa, volutpat vestibulum elit.";
+    			t2 = space();
+    			p1 = element("p");
+    			p1.textContent = "Cras rutrum eu nunc non sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo massa sed justo condimentum lobortis. Nullam eget mauris at sapien blandit elementum. Quisque dignissim ipsum ut nisl sagittis luctus. Ut sed vulputate nisi. Nulla facilisi. Duis non gravida mi. Fusce pellentesque orci feugiat sem sodales cursus. Ut scelerisque nulla non vulputate cursus. In pretium lorem et dolor imperdiet, id cursus ligula malesuada. Duis vitae feugiat purus, at ornare eros. Donec purus mi, congue in tortor sed, rhoncus sagittis nulla.";
+    			attr_dev(p0, "class", "svelte-mmaux");
+    			add_location(p0, file, 39, 2, 1106);
+    			attr_dev(p1, "class", "svelte-mmaux");
+    			add_location(p1, file, 40, 2, 1645);
     		},
     		m: function mount(target, anchor) {
     			mount_component(input, target, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, p1, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -2338,6 +2356,10 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			destroy_component(input, detaching);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(p1);
     		}
     	};
 
@@ -2345,14 +2367,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(34:1) <Card>",
+    		source: "(37:1) <Card>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:1) {#each mainOptions as option}
+    // (48:1) {#each mainOptions as option}
     function create_each_block_1(ctx) {
     	let inputgroup;
     	let updating_option;
@@ -2409,14 +2431,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(41:1) {#each mainOptions as option}",
+    		source: "(48:1) {#each mainOptions as option}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:1) {#each inputOptions as option}
+    // (54:1) {#each inputOptions as option}
     function create_each_block(ctx) {
     	let inputgroup;
     	let updating_option;
@@ -2473,7 +2495,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(47:1) {#each inputOptions as option}",
+    		source: "(54:1) {#each inputOptions as option}",
     		ctx
     	});
 
@@ -2481,7 +2503,7 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let body;
+    	let main;
     	let card;
     	let t0;
     	let hr0;
@@ -2526,7 +2548,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			body = element("body");
+    			main = element("main");
     			create_component(card.$$.fragment);
     			t0 = space();
     			hr0 = element("hr");
@@ -2545,18 +2567,18 @@ var app = (function () {
     			}
 
     			each1_anchor = empty();
-    			attr_dev(body, "style", /*mainTheme*/ ctx[3]);
-    			attr_dev(body, "class", "svelte-17hr2w5");
-    			add_location(body, file, 32, 0, 993);
-    			add_location(hr0, file, 38, 1, 1070);
-    			add_location(hr1, file, 44, 1, 1153);
+    			attr_dev(main, "style", /*mainTheme*/ ctx[3]);
+    			attr_dev(main, "class", "svelte-mmaux");
+    			add_location(main, file, 35, 0, 1047);
+    			add_location(hr0, file, 45, 1, 2242);
+    			add_location(hr1, file, 51, 1, 2325);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, body, anchor);
-    			mount_component(card, body, null);
+    			insert_dev(target, main, anchor);
+    			mount_component(card, main, null);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, hr0, anchor);
     			insert_dev(target, t1, anchor);
@@ -2586,7 +2608,7 @@ var app = (function () {
     			card.$set(card_changes);
 
     			if (!current || dirty & /*mainTheme*/ 8) {
-    				attr_dev(body, "style", /*mainTheme*/ ctx[3]);
+    				attr_dev(main, "style", /*mainTheme*/ ctx[3]);
     			}
 
     			if (dirty & /*mainOptions*/ 2) {
@@ -2676,7 +2698,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(body);
+    			if (detaching) detach_dev(main);
     			destroy_component(card);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(hr0);
