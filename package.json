@@ -2,7 +2,7 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
-  "main": "public/build/bundle.js",
+  "main": "gh-pages.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -19,6 +19,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.0",
     "sirv-cli": "^1.0.0"
   }
 }
